@@ -1,32 +1,14 @@
 <template>
-  <img src="./logo.png">
-  <h1>Hello Vue 3!</h1>
-  <button @click="inc">Clicked {{ count }} times.</button>
+  <input-props></input-props>
 </template>
 
 <script>
-import { ref } from 'vue'
+import InputProps from './InputProps/Index.vue'
 
 export default {
-  setup() {
-    const count = ref(0)
-    const inc = () => {
-      count.value++
-    }
-
-    return {
-      count,
-      inc
-    }
+  components: {
+    InputProps,
   }
 }
 </script>
 
-<style scoped>
-img {
-  width: 200px;
-}
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-</style>
