@@ -14,7 +14,7 @@ export default {
     MyInput
   },
   setup() {
-    const msg = ref('おやすみ')
+    const msg = ref('こんばんは')
 
     return {
       msg

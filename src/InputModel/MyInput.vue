@@ -1,5 +1,5 @@
 <template>
-  <input type="text" :value="modelVulue"/>
+  <input type="text" :value="modelVulue" @input="onInput"/>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
       default: ''
     }
   },
-  setup(props) {
+  setup(props, context) {
     const onInput = ($event) => {
       context.emit('update:modelValue', $event.target.value)
     }
